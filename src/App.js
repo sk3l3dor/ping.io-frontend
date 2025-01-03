@@ -5,15 +5,20 @@ import store from './redux/store';
 import Login from './components/Login'; 
 import Home from './components/Home';
 import ProtectedRoute from './components/ProtectedRoute';
-import OtpPage from './pages/OtpPage'
+import OTPPage from './pages/OtpPage'
 import LandingPage from './pages/LandingPage'
+import SignIn from '../src/components/SignIn';
+import SignUp from '../src/sign-up/SignUp';
+import DashBoard from './components/DashBoard';
 
 function App() {
     return (
         <Provider store={store}>
                 <Routes>
-                    <Route path="/" element={<LandingPage />} />
-                    <Route path="/otp" element={<OtpPage />} />
+                    <Route path="/" element={<SignIn />} />
+                    <Route path="/otp" element={<OTPPage />} />
+                    <Route path="/sign-up" element={<SignUp />} />
+                    <Route path="/dashboard" element={<DashBoard />} />
                 </Routes>
         </Provider>
     );
